@@ -1,0 +1,207 @@
+:host {
+  color: #fff;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+.card {
+  height: 100%;
+}
+
+//! top bar section
+.card .top-bar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em;
+}
+
+.card .top-bar .contanier {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1em;
+  padding: 1em;
+}
+
+.card .top-bar .back {
+  color: royalblue;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.card .top-bar .back:hover,
+.card .top-bar .back:active {
+  color: royalblue;
+  text-decoration: none;
+}
+
+//? dots costumaize section
+.card .top-bar .contanier .dots {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1em;
+  align-items: center;
+}
+
+.card .top-bar .contanier .dots .dot {
+  background-color: rgb(191 208 255);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 1em;
+  transition: all 300ms;
+}
+
+.dot-active {
+  background-color: rgb(37 99 235) !important;
+  width: 2rem !important ;
+  transition: all 300ms;
+}
+
+.dot-done {
+  background-color: rgb(37 99 235) !important;
+}
+
+//! form countent section
+.card .contanier-form {
+  position: fixed;
+  width: 70%;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  border-radius: 2em;
+  transform: translate(-50%, -50%);
+}
+
+.card .contanier-form h2,
+.card .contanier-form h6,
+.card .contanier-form p  {
+  text-align: center;
+}
+
+.card .contanier-form p {
+  margin-bottom: 2em;
+  color: gray;
+}
+
+.card .contanier-form .contanier-form-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  width: 50%;
+  transform: translateX(50%);
+}
+
+.card .contanier-form .page3 {
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card .contanier-form .page3 .card {
+  height: 7rem;
+  width: 12rem;
+  padding: 0.5em 2em;
+  border: 1px solid #dde6e7;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card .contanier-form .page3 .card .bi {
+ color: rgb(131, 164, 255);
+}
+
+.card .contanier-form .contanier-form-inputs .label {
+  text-align: right;
+  color: gray;
+  margin-bottom: 0.5em;
+}
+
+.card .contanier-form .page4-icon-contanier {
+  display: flex;
+  background-color: rgb(191 208 255);
+  width: 8rem;
+  height: 8rem;
+  text-align: center;
+  border-radius: 100em;
+  justify-content: center;
+  align-items: center;
+}
+
+//! primeng.org contanier and inputs setup
+ .card .contanier-form .contanier-form-inputs .contanier-mask {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+:host ::ng-deep .card .contanier-form .contanier-form-inputs .p-button {
+  width: 100%;
+  border-radius: 6px;
+  margin: 2rem 0em;
+}
+
+:host ::ng-deep .card .contanier-form .contanier-form-inputs .p-inputmask {
+  width: 100%;
+  border-radius: 0 6px 6px 0;
+}
+:host ::ng-deep .card .contanier-form .contanier-form-inputs .contanier-mask  .p-inputtext {
+  width: 100%;
+  border-radius: 0 6px 6px 0;
+}
+
+ .card .contanier-form .contanier-form-inputs .contanier-mask  .password {
+  text-align: right;
+}
+
+
+.card .contanier-form .contanier-form-inputs .inputMask {
+  width: 100%;
+}
+
+//? input-icons setup
+.card .contanier-form .contanier-form-inputs .input-icon {
+  width: 15%;
+}
+.card .contanier-form .contanier-form-inputs .country218 {
+  background-color: rgb(37 99 235);
+  color: whitesmoke;
+}
+.card .contanier-form .contanier-form-inputs .password-eye {
+  background-color: white;
+  color: darkgray;
+}
+
+//? input otp code setup
+:host ::ng-deep .card .contanier-form .contanier-form-inputs .p-inputotp{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+:host ::ng-deep .card .contanier-form .contanier-form-inputs .p-inputotp-input{
+  border-radius: 100em;
+  width: 2em;
+  height: 2em;
+  font-size: 2em;
+
+}
+//! ===============
+
+
+//? verified timer setup
+.card .contanier-form .contanier-form-inputs .verified_timer{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1em;
+  }
+
+

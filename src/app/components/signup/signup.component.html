@@ -1,0 +1,262 @@
+<p-toast />
+<div class="card">
+  <!--! top bar -->
+  @if (index >= 4){
+  <!--* hide top bar from last page [ page 4 ] -->
+  }@else {
+  <div class="top-bar">
+    <div class="contanier">
+      <div class="dots">
+        <div class="dot" [ngClass]="{ 'dot-active': index === 2 }"></div>
+        <div
+          class="dot"
+          [ngClass]="{ 'dot-active': index === 1, 'dot-done': index >= 1 }"
+        ></div>
+        <div
+          class="dot"
+          [ngClass]="{ 'dot-active': index === 0, 'dot-done': index >= 0 }"
+        ></div>
+      </div>
+      <p style="margin: 0">{{ index + 1 }} of 3</p>
+    </div>
+
+    <!--* to hide it when page 1 worked -->
+    @if (index !== 0) {<a
+      class="back"
+      role="button"
+      (click)="back($event, index)"
+      >العودة للصفحة السابقة</a
+    >}
+    <!--* ===============  -->
+  </div>
+  }
+
+  <!--! page one [1]-->
+  <form #form="ngForm">
+    @if (index === 0) {
+    <div class="contanier-form">
+      <h2>إنشاء حساب جديد</h2>
+      <p>قم بتعبئة بياناتك لتفعيل حسابك على البوابة</p>
+      <!--* form down -->
+      <div class="contanier-form-inputs">
+        <div>
+          <div class="label">رقم القيد</div>
+          <div class="card flex justify-content-center">
+            <input
+              name="Registration_Number"
+              type="text"
+              pInputText
+              [(ngModel)]="Registration_Number"
+            />
+          </div>
+        </div>
+
+        @if ( Registration_Number && Registration_Number.startsWith('1') ) {
+        <div>
+          <div class="label">رقم جواز السفر</div>
+          <div class="card flex justify-content-center">
+            <input
+              type="text"
+              name="passport_Number"
+              pInputText
+              [(ngModel)]="passport_Number"
+            />
+          </div>
+        </div>
+        }@else if ( Registration_Number && Registration_Number.startsWith('2') )
+        {
+        <div>
+          <div class="label">الرقم الوطني</div>
+          <div class="card flex justify-content-center">
+            <input
+              type="text"
+              name="country_member_Number"
+              pInputText
+              [(ngModel)]="country_member_Number"
+            />
+          </div>
+        </div>
+        }
+
+        <div>
+          <p-button label="التالي" (onClick)="next(index)" />
+          <p>لديك حساب ؟ <a href="#">تسجيل الدخول</a></p>
+        </div>
+      </div>
+      <!--* =========== -->
+    </div>
+
+    <!--! page two [2]-->
+    } @else if (index === 1) {
+    <div class="contanier-form">
+      <h2>إنشاء حساب جديد</h2>
+      <p>قم بتعبئة بياناتك لتفعيل حسابك على البوابة</p>
+      <!--* form down -->
+      <div class="contanier-form-inputs">
+        <div>
+          <div class="label">رقم الهاتف</div>
+          <div class="contanier-mask card flex justify-content-center">
+            <p-inputGroupAddon class="input-icon country218"
+              >+218</p-inputGroupAddon
+            >
+            <p-inputMask
+              class="inputMask"
+              name="phone"
+              [(ngModel)]="phone"
+              mask="99 999 9999"
+              placeholder="9X XXX XXXX"
+              slotChar="9X XXX XXXX"
+            />
+          </div>
+        </div>
+
+        <div>
+          <div class="label">البريد الإلكتروني</div>
+          <div class="card flex justify-content-center">
+            <input type="text" name="email" pInputText [(ngModel)]="email" />
+          </div>
+        </div>
+
+        <div>
+          <p-button label="التالي" (onClick)="next(index)" />
+          <p>لديك حساب ؟ <a href="#">تسجيل الدخول</a></p>
+        </div>
+      </div>
+      <!--* =========== -->
+    </div>
+
+    <!--! page three [3]-->
+    } @else if (index === 2) { @if (!verified_page ){
+    <div class="contanier-form">
+      <h2>إختر طريقة تفعيل حسابك</h2>
+      <p>
+        . حسابك غير مفعل ، يرجى اختيار الطريقة التي ترغب في تفعيل حسابك عن
+        طريقها
+      </p>
+      <!--* form down -->
+      <div class="page3 contanier-form-inputs">
+        <div class="card" (click)="verified_it('phone')">
+          <i class="bi bi-telephone-fill fs-1"></i>
+          <div class="label">رقم الهاتف</div>
+        </div>
+
+        <div class="card" (click)="verified_it('email')">
+          <i class="bi bi-envelope-fill fs-1"></i>
+          <div class="label">البريد الإلكتروني</div>
+        </div>
+      </div>
+      <!--* =========== -->
+    </div>
+    } @else if (verified_page) {
+
+    <div class="contanier-form">
+      <h2>قم بإدخال رمز التحقق</h2>
+      @if (verified_with === "phone") {
+      <p style="margin-bottom: 1em">
+        لقد قمنا بإرسال رمز التحقق على رقم الهاتف
+      </p>
+      <h6 style="padding-bottom: 2em">+218 {{ phone }}</h6>
+      }@else if (verified_with === "email") {
+      <p style="margin-bottom: 1em">
+        لقد قمنا بإرسال رمز التحقق على البريد الإلكتروني
+      </p>
+      <h6 style="padding-bottom: 2em">{{ email }}</h6>
+      }
+      <!--* form down -->
+      <div class="contanier-form-inputs">
+        <div>
+          <p-inputOtp
+            [(ngModel)]="inputOtp"
+            name="inputOtp"
+            [integerOnly]="true"
+          />
+        </div>
+
+        <div class="verified_timer">
+          <a href="#">أعد الإرسال</a>
+          <p>
+            متبقي {{ min >= 10 ? "" + min : "0" + min }}:{{
+              sec >= 10 ? "" + sec : "0" + sec
+            }}
+            دقيقة
+          </p>
+        </div>
+        <div>
+          <p-button label="تفعيل" (onClick)="sendcode()" />
+        </div>
+      </div>
+      <!--* =========== -->
+    </div>
+
+    <!--! page four [4] -->
+    } }@else if (index === 4) {
+    <div class="contanier-form">
+      <div class="d-flex justify-content-center pb-3">
+        <div class="page4-icon-contanier">
+          <i
+            class="bi bi-lock-fill"
+            style=" color:rgb(37 99 235) ; font-size: 4rem; transform: scaleX(1.2)"
+          ></i>
+        </div>
+      </div>
+      <h2>قم بإنشاء كلمة مرور</h2>
+      <p>يجب على كلمة المرور ان تتكون من 6 احرف على الأقل</p>
+      <!--* form down -->
+      <div class="contanier-form-inputs">
+        <div>
+          <div class="contanier-mask card flex justify-content-center">
+            <p-inputGroupAddon
+              class="password-eye"
+              (click)="eye('set-password')"
+              ><i
+                class="bi"
+                [className]="
+                  password_eye1 ? 'bi-eye-fill' : 'bi-eye-slash-fill'
+                "
+              ></i>
+            </p-inputGroupAddon>
+            <input
+            name="password"
+            [(ngModel)]="password"
+              pInputText
+              class="password"
+              [type]="password_eye1 ? 'text' : 'password'"
+              placeholder="ادخل كلمة المرور"
+            />
+          </div>
+        </div>
+
+        <div>
+          <div class="contanier-mask card flex justify-content-center">
+            <p-inputGroupAddon
+              class="password-eye"
+              (click)="eye('conform-password')"
+              ><i
+                class="bi"
+                [className]="
+                  password_eye2 ? 'bi-eye-fill' : 'bi-eye-slash-fill'
+                "
+              ></i>
+              <!-- <i class="bi bi-eye-slash-fill"></i> -->
+            </p-inputGroupAddon>
+            <input
+              name="conform-password"
+              [(ngModel)]="conform_password"
+              pInputText
+              class="password"
+              [type]="password_eye2 ? 'text' : 'password'"
+              placeholder="قم بتأكيد كلمة المرور"
+            />
+          </div>
+        </div>
+
+        <div>
+          <p-button label="إنشاء حساب" (onClick)="signup_is_done()" />
+        </div>
+      </div>
+      <!--* =========== -->
+    </div>
+
+    }
+  </form>
+</div>
