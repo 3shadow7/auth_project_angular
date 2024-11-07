@@ -1,0 +1,340 @@
+
+<div *ngIf="loading ; else load_content" class="spinner-border text-secondary" style="
+width: 2em;
+height: 2em;
+align-self: center;
+font-size: xxx-large;" role="status">
+  <span class="sr-only"></span>
+</div>
+
+
+
+<ng-template #load_content>
+  <div
+    style="
+      height: 100%;
+      padding: 0.8em;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      gap: 0.5em;
+    "
+  >
+    <div
+      style="
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 10%;
+        margin-bottom: 0.5rem;
+        align-items: center;
+      "
+    >
+      <div
+        style="
+          min-width: 2em;
+          display: flex;
+          min-height: 2em;
+          align-self: center;
+
+          box-shadow: 0px 2px 5px 0 lightgray;
+          background: whitesmoke;
+          border-radius: 100em;
+          align-items: center;
+          justify-content: center;
+          width: 2em;
+          height: 2em;
+        "
+      >
+        <i class="bi bi-caret-left-fill"></i>
+      </div>
+      <div>يوليو</div>
+      <div
+        style="
+          min-width: 2em;
+          display: flex;
+          min-height: 2em;
+          align-self: center;
+          box-shadow: 0px 2px 5px 0 lightgray;
+          background: whitesmoke;
+          border-radius: 100em;
+          align-items: center;
+          justify-content: center;
+          width: 2em;
+          height: 2em;
+        "
+      >
+        <i class="bi bi-caret-right-fill"></i>
+      </div>
+    </div>
+    <div
+      style="
+        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: nowrap;
+        gap: 0.5rem;
+        border-radius: 1em;
+        background-color: rgb(217 230 255);
+        align-items: center;
+        justify-content: space-between;
+      "
+    >
+      <div style="padding-right: 0.5em">
+        <i class="bi bi-caret-right-fill"></i>
+      </div>
+      <div
+        style="
+          width: 3rem;
+          height: 3rem;
+          font-size: 1em;
+          background-color: rgb(10, 65, 168);
+          border-radius: 0.7em;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <p style="font-size: smaller; color: white; margin: 0">مواد</p>
+      </div>
+      <div
+        style="
+          width: 3rem;
+          height: 3rem;
+          font-size: 1em;
+          border-radius: 0.7em;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <p style="font-size: smaller; color: #17177b; margin: 0">مواد</p>
+        <p style="margin: 0; font-weight: 500">25</p>
+      </div>
+      <div
+        style="
+          width: 3rem;
+          height: 3rem;
+          font-size: 1em;
+          border-radius: 0.7em;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <p style="font-size: smaller; color: #17177b; margin: 0">مواد</p>
+        <p style="margin: 0; font-weight: 500">25</p>
+      </div>
+      <div
+        style="
+          width: 3rem;
+          height: 3rem;
+          font-size: 1em;
+          border-radius: 0.7em;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <p style="font-size: smaller; color: #17177b; margin: 0">مواد</p>
+        <p style="margin: 0; font-weight: 500">25</p>
+      </div>
+      <div
+        style="
+          width: 3rem;
+          height: 3rem;
+          font-size: 1em;
+          border-radius: 0.7em;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <p style="font-size: smaller; color: #17177b; margin: 0">مواد</p>
+        <p style="margin: 0; font-weight: 500">25</p>
+      </div>
+      <div
+        style="
+          width: 3rem;
+          height: 3rem;
+          font-size: 1em;
+          border-radius: 0.7em;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          justify-content: center;
+          align-items: center;
+        "
+      >
+        <p style="font-size: smaller; color: #17177b; margin: 0">مواد</p>
+        <p style="margin: 0; font-weight: 500">25</p>
+      </div>
+      <div style="padding-left: 0.5em">
+        <i class="bi bi-caret-left-fill"></i>
+      </div>
+    </div>
+    <div
+      style="
+        display: flex;
+        width: 100%;
+        height: 70%;
+        background-color: transparent;
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+        gap: 1em;
+      "
+    >
+      <div
+        style="
+          width: 100%;
+          height: 100%;
+          background-color: aliceblue;
+          border-radius: 1em;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          justify-content: space-around;
+        "
+      >
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            padding: 0 2rem;
+          "
+        >
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              flex-wrap: nowrap;
+              gap: 0.3rem;
+              color: #17177b;
+            "
+          >
+            <p>11:00 - 9:00</p>
+            <i class="bi bi-clock"></i>
+          </div>
+          <div style="font-weight: 500">برمجة</div>
+        </div>
+
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            padding: 0 2rem;
+            justify-content: flex-end;
+            gap: 2rem;
+          "
+        >
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              flex-wrap: nowrap;
+              gap: 0.3rem;
+            "
+          >
+            <p>القاعة الرئيسية</p>
+            <i class="bi bi-geo-fill"></i>
+          </div>
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              flex-wrap: nowrap;
+              gap: 0.3rem;
+            "
+          >
+            <p>د،صالح علي</p>
+            <i class="bi bi-person-circle"></i>
+          </div>
+        </div>
+      </div>
+      <div
+        style="
+          width: 100%;
+          height: 100%;
+          background-color: aliceblue;
+          border-radius: 1em;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          justify-content: space-around;
+        "
+      >
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            padding: 0 2rem;
+          "
+        >
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              flex-wrap: nowrap;
+              gap: 0.3rem;
+              color: #17177b;
+            "
+          >
+            <p>11:00 - 9:00</p>
+            <i class="bi bi-clock"></i>
+          </div>
+          <div style="font-weight: 500">برمجة</div>
+        </div>
+
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            padding: 0 2rem;
+            justify-content: flex-end;
+            gap: 2rem;
+          "
+        >
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              flex-wrap: nowrap;
+              gap: 0.3rem;
+            "
+          >
+            <p>القاعة الرئيسية</p>
+            <i class="bi bi-geo-fill"></i>
+          </div>
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              flex-wrap: nowrap;
+              gap: 0.3rem;
+            "
+          >
+            <p>د،صالح علي</p>
+            <i class="bi bi-person-circle"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

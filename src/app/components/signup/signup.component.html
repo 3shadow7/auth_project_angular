@@ -32,7 +32,7 @@
   }
 
   <!--! page one [1]-->
-  <form #form="ngForm">
+  <form >
     @if (index === 0) {
     <div class="contanier-form">
       <h2>إنشاء حساب جديد</h2>
@@ -46,12 +46,12 @@
               name="Registration_Number"
               type="text"
               pInputText
-              [(ngModel)]="Registration_Number"
+              [(ngModel)]="form.Registration_Number"
             />
           </div>
         </div>
 
-        @if ( Registration_Number && Registration_Number.startsWith('1') ) {
+        @if ( form.Registration_Number && form.Registration_Number.startsWith('1') ) {
         <div>
           <div class="label">رقم جواز السفر</div>
           <div class="card flex justify-content-center">
@@ -59,11 +59,11 @@
               type="text"
               name="passport_Number"
               pInputText
-              [(ngModel)]="passport_Number"
+              [(ngModel)]="form.passport_Number"
             />
           </div>
         </div>
-        }@else if ( Registration_Number && Registration_Number.startsWith('2') )
+        }@else if ( form.Registration_Number && form.Registration_Number.startsWith('2') )
         {
         <div>
           <div class="label">الرقم الوطني</div>
@@ -72,7 +72,7 @@
               type="text"
               name="country_member_Number"
               pInputText
-              [(ngModel)]="country_member_Number"
+              [(ngModel)]="form.country_member_Number"
             />
           </div>
         </div>
@@ -102,7 +102,7 @@
             <p-inputMask
               class="inputMask"
               name="phone"
-              [(ngModel)]="phone"
+              [(ngModel)]="form.phone"
               mask="99 999 9999"
               placeholder="9X XXX XXXX"
               slotChar="9X XXX XXXX"
@@ -113,7 +113,7 @@
         <div>
           <div class="label">البريد الإلكتروني</div>
           <div class="card flex justify-content-center">
-            <input type="text" name="email" pInputText [(ngModel)]="email" />
+            <input type="text" name="email" pInputText [(ngModel)]="form.email" />
           </div>
         </div>
 
@@ -155,12 +155,12 @@
       <p style="margin-bottom: 1em">
         لقد قمنا بإرسال رمز التحقق على رقم الهاتف
       </p>
-      <h6 style="padding-bottom: 2em">+218 {{ phone }}</h6>
+      <h6 style="padding-bottom: 2em">+218 {{ form.phone }}</h6>
       }@else if (verified_with === "email") {
       <p style="margin-bottom: 1em">
         لقد قمنا بإرسال رمز التحقق على البريد الإلكتروني
       </p>
-      <h6 style="padding-bottom: 2em">{{ email }}</h6>
+      <h6 style="padding-bottom: 2em">{{ form.email }}</h6>
       }
       <!--* form down -->
       <div class="contanier-form-inputs">
@@ -217,7 +217,7 @@
             </p-inputGroupAddon>
             <input
             name="password"
-            [(ngModel)]="password"
+            [(ngModel)]="form.password"
               pInputText
               class="password"
               [type]="password_eye1 ? 'text' : 'password'"

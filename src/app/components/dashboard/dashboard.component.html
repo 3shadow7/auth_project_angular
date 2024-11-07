@@ -1,0 +1,1686 @@
+<div
+  style="
+    background-color: ghostwhite;
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100%;
+    width: 100%;
+  "
+>
+  <div
+    style="
+      display: flex;
+      background-color: transparent;
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+      flex-wrap: nowrap;
+    "
+  >
+    <nav
+      style="
+        width: 100%;
+        display: flex;
+        height: 7%;
+        flex-wrap: nowrap;
+
+        padding: 0em 0rem 0rem 2rem;
+        margin-top: 1rem;
+        flex-direction: row;
+        justify-content: space-between;
+      "
+    >
+      <div
+        style="
+          width: fit-content;
+          height: 100%;
+          display: flex;
+          background-color: transparent;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          gap: 1em;
+          align-items: center;
+        "
+      >
+        <div
+          style="
+            display: flex;
+            flex-direction: row;
+            gap: 0.4em;
+            flex-wrap: nowrap;
+            padding: 0.5em;
+            background-color: ghostwhite;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            border-radius: 100em;
+            box-shadow: 0px 2px 5px 0 lightgray;
+          "
+        >
+          <div><i class="bi bi-chevron-down"></i></div>
+          <div>جمال عادل</div>
+          <div
+            style="
+              width: 3em;
+              display: flex;
+              height: 3em;
+              background: cornflowerblue;
+              border-radius: 100em;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            <i class="bi bi-brilliance"></i>
+          </div>
+        </div>
+        <div><i class="bi bi-lock-fill"></i></div>
+        <div><i class="bi bi-lock-fill"></i></div>
+      </div>
+      <div
+        style="
+          width: fit-content;
+          height: 100%;
+          display: flex;
+          font-size: x-large;
+          background-color: transparent;
+          align-items: center;
+          font-weight: 600;
+        "
+      >
+        {{ title[pageindex] }}
+      </div>
+    </nav>
+    <div
+      style="
+        display: flex;
+        width: 100%;
+        background-color: transparent;
+        height: 100%;
+        flex-direction: row;
+
+        gap: 1rem;
+        margin: 1rem 0rem;
+        flex-wrap: nowrap;
+      "
+    >
+      <div
+        style="
+          width: 40%;
+          background-color: white;
+          border-radius: 2rem;
+          box-shadow: 0 3px 5px lightgray;
+          margin: 0rem 0em 0rem 1rem;
+        "
+      >
+        @if (pageindex == 1) {
+        <div
+          style="
+            width: 100%;
+            height: 40%;
+            background-color: transparent;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            border-radius: 2rem 2rem 0 0;
+          "
+        >
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              flex-wrap: nowrap;
+              justify-content: space-between;
+
+              padding: 1rem;
+              background-color: rgb(217 230 255);
+              border-radius: 2rem 2rem 0 0;
+            "
+          >
+            <p style="font-size: small; color: gray">عرض الكل</p>
+            <p style="font-size: medium">المحاضرات</p>
+          </div>
+
+          <!--! app lectures -->
+          <app-lectures
+            style="
+              display: flex;
+              width: 100%;
+              height: 100%;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+          </app-lectures>
+          <!--! ============== -->
+        </div>
+
+        <div
+          style="
+            width: 100%;
+            height: 30%;
+            background-color: transparent;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+          "
+        >
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              flex-wrap: nowrap;
+              justify-content: space-between;
+
+              padding: 1rem;
+              height: fit-content;
+              background-color: rgb(217 230 255);
+            "
+          >
+            <p style="font-size: small; color: gray">عرض الكل</p>
+            <p style="font-size: medium">صندوق البريد</p>
+          </div>
+
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              flex-wrap: nowrap;
+              width: 100%;
+              height: 100%;
+            "
+          >
+            <div
+              style="
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: row-reverse;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 1rem;
+              "
+            >
+              <div
+                style="
+                  width: 3em;
+                  display: flex;
+                  height: 3em;
+                  min-width: 3em;
+                  min-height: 3em;
+                  background: cornflowerblue;
+                  border-radius: 100em;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <i class="bi bi-person-circle"></i>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  flex-wrap: nowrap;
+                  align-items: flex-end;
+                  width: 100%;
+                  height: 100%;
+                  padding-right: 0.5em;
+                "
+              >
+                <div
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    padding-top: 0em;
+                    display: flex;
+                    background-color: transparent;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                  "
+                >
+                  <p style="text-align: right">جمال عادل محمد الزحاف</p>
+                </div>
+                <div
+                  style="
+                    width: 100%;
+                    height: 50%;
+                    line-height: 0;
+                    background-color: transparent;
+                  "
+                >
+                  <p
+                    style="
+                      font-size: small;
+                      color: gray;
+                      width: 17rem;
+                      font-weight: 500;
+                      white-space: nowrap;
+                      overflow: hidden;
+                      text-overflow: ellipsis;
+                      direction: rtl;
+                      padding: 1rem 0;
+                    "
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Magni aut rem reprehenderit, temporibus sed pariatur
+                    eligendi ea ex aliquam, placeat similique iste nobis est
+                    labore suscipit dolore nisi culpa provident!
+                  </p>
+                </div>
+              </div>
+
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  flex-wrap: nowrap;
+
+                  align-items: flex-start;
+                  width: 20%;
+                  height: 100%;
+                  justify-content: space-evenly;
+                "
+              >
+                <p style="color: gray; font-size: small">قبل دقيقة</p>
+                <div style="width: 100%; color: rgb(10, 65, 168)">
+                  <i class="bi bi-1-circle-fill"></i>
+                </div>
+              </div>
+            </div>
+
+            <div
+              style="
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: row-reverse;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 1rem;
+              "
+            >
+              <div
+                style="
+                  width: 3em;
+                  display: flex;
+                  height: 3em;
+                  min-width: 3em;
+                  min-height: 3em;
+                  background: cornflowerblue;
+                  border-radius: 100em;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <i class="bi bi-person-circle"></i>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  flex-wrap: nowrap;
+                  align-items: flex-end;
+                  width: 100%;
+                  height: 100%;
+                  padding-right: 0.5em;
+                "
+              >
+                <div
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    padding-top: 0em;
+                    display: flex;
+                    background-color: transparent;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                  "
+                >
+                  <p style="text-align: right">جمال عادل محمد الزحاف</p>
+                </div>
+                <div
+                  style="
+                    width: 100%;
+                    height: 50%;
+                    line-height: 0;
+                    background-color: transparent;
+                  "
+                >
+                  <p
+                    style="
+                      font-size: small;
+                      color: gray;
+                      width: 17rem;
+                      font-weight: 500;
+                      white-space: nowrap;
+                      overflow: hidden;
+                      text-overflow: ellipsis;
+                      direction: rtl;
+                      padding: 1rem 0;
+                    "
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Magni aut rem reprehenderit, temporibus sed pariatur
+                    eligendi ea ex aliquam, placeat similique iste nobis est
+                    labore suscipit dolore nisi culpa provident!
+                  </p>
+                </div>
+              </div>
+
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  flex-wrap: nowrap;
+
+                  align-items: flex-start;
+                  width: 20%;
+                  height: 100%;
+                  justify-content: space-evenly;
+                "
+              >
+                <p style="color: gray; font-size: small">قبل دقيقة</p>
+                <div style="width: 100%; color: rgb(10, 65, 168)">
+                  <i class="bi bi-1-circle-fill"></i>
+                </div>
+              </div>
+            </div>
+
+            <div
+              style="
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: row-reverse;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 1rem;
+              "
+            >
+              <div
+                style="
+                  width: 3em;
+                  display: flex;
+                  height: 3em;
+                  min-width: 3em;
+                  min-height: 3em;
+                  background: cornflowerblue;
+                  border-radius: 100em;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <i class="bi bi-person-circle"></i>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  flex-wrap: nowrap;
+                  align-items: flex-end;
+                  width: 100%;
+                  height: 100%;
+                  padding-right: 0.5em;
+                "
+              >
+                <div
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    padding-top: 0em;
+                    display: flex;
+                    background-color: transparent;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                  "
+                >
+                  <p style="text-align: right">جمال عادل محمد الزحاف</p>
+                </div>
+                <div
+                  style="
+                    width: 100%;
+                    height: 50%;
+                    line-height: 0;
+                    background-color: transparent;
+                  "
+                >
+                  <p
+                    style="
+                      font-size: small;
+                      color: gray;
+                      width: 17rem;
+                      font-weight: 500;
+                      white-space: nowrap;
+                      overflow: hidden;
+                      text-overflow: ellipsis;
+                      direction: rtl;
+                      padding: 1rem 0;
+                    "
+                  >
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Magni aut rem reprehenderit, temporibus sed pariatur
+                    eligendi ea ex aliquam, placeat similique iste nobis est
+                    labore suscipit dolore nisi culpa provident!
+                  </p>
+                </div>
+              </div>
+
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  flex-wrap: nowrap;
+
+                  align-items: flex-start;
+                  width: 20%;
+                  height: 100%;
+                  justify-content: space-evenly;
+                "
+              >
+                <p style="color: gray; font-size: small">قبل دقيقة</p>
+                <div style="width: 100%; color: rgb(10, 65, 168)">
+                  <i class="bi bi-1-circle-fill"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            width: 100%;
+            height: 30%;
+            background-color: transparent;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            border-radius: 0 0 2rem 2rem;
+          "
+        >
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              flex-wrap: nowrap;
+              justify-content: space-between;
+
+              padding: 1rem;
+              height: fit-content;
+              background-color: rgb(217 230 255);
+            "
+          >
+            <p style="font-size: small; color: gray">عرض الكل</p>
+            <p style="font-size: medium">طلبات المستندات</p>
+          </div>
+
+          <!--!======================================================-->
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              flex-wrap: nowrap;
+              width: 100%;
+            "
+          >
+            <div
+              style="
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: row-reverse;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 1rem;
+              "
+            >
+              <div
+                style="
+                  width: 3em;
+                  display: flex;
+                  height: 3em;
+                  min-width: 3em;
+                  min-height: 3em;
+                  background: cornflowerblue;
+                  border-radius: 100em;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <i class="bi bi-person-circle"></i>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  flex-wrap: nowrap;
+                  align-items: flex-end;
+                  width: 100%;
+                  height: 100%;
+                  padding-right: 0.5em;
+                "
+              >
+                <div
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    padding-top: 0em;
+                    display: flex;
+                    background-color: transparent;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                  "
+                >
+                  <p style="text-align: right">إفادة إلكترونية</p>
+                </div>
+                <div
+                  style="
+                    width: 100%;
+                    height: 50%;
+                    line-height: 0;
+                    background-color: transparent;
+                  "
+                >
+                  <p
+                    style="
+                      font-size: small;
+                      color: gray;
+                      width: 17rem;
+                      white-space: nowrap;
+                      overflow: hidden;
+                      text-overflow: ellipsis;
+                      direction: rtl;
+                      padding: 1rem 0;
+                    "
+                  >
+                    قبل دقيقة
+                  </p>
+                </div>
+              </div>
+
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  flex-wrap: nowrap;
+
+                  align-items: center;
+
+                  width: 20%;
+                  justify-content: center;
+                "
+              >
+                <p-tag severity="secondary" value="تم الارسال" />
+              </div>
+            </div>
+
+            <div
+              style="
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: row-reverse;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 1rem;
+              "
+            >
+              <div
+                style="
+                  width: 3em;
+                  display: flex;
+                  height: 3em;
+                  min-width: 3em;
+                  min-height: 3em;
+                  background: cornflowerblue;
+                  border-radius: 100em;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <i class="bi bi-person-circle"></i>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  flex-wrap: nowrap;
+                  align-items: flex-end;
+                  width: 100%;
+                  height: 100%;
+                  padding-right: 0.5em;
+                "
+              >
+                <div
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    padding-top: 0em;
+                    display: flex;
+                    background-color: transparent;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                  "
+                >
+                  <p style="text-align: right">كشف درجات</p>
+                </div>
+                <div
+                  style="
+                    width: 100%;
+                    height: 50%;
+                    line-height: 0;
+                    background-color: transparent;
+                  "
+                >
+                  <p
+                    style="
+                      font-size: small;
+                      color: gray;
+                      width: 17rem;
+                      white-space: nowrap;
+                      overflow: hidden;
+                      text-overflow: ellipsis;
+                      direction: rtl;
+                      padding: 1rem 0;
+                    "
+                  >
+                    قبل اسبوع
+                  </p>
+                </div>
+              </div>
+
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  flex-wrap: nowrap;
+
+                  align-items: center;
+
+                  width: 20%;
+                  justify-content: center;
+                "
+              >
+                <p-tag severity="warning" value="قيد الانجاز" />
+              </div>
+            </div>
+            <div
+              style="
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: row-reverse;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 1rem;
+              "
+            >
+              <div
+                style="
+                  width: 3em;
+                  display: flex;
+                  height: 3em;
+                  min-width: 3em;
+                  min-height: 3em;
+                  background: cornflowerblue;
+                  border-radius: 100em;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <i class="bi bi-person-circle"></i>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  flex-wrap: nowrap;
+                  align-items: flex-end;
+                  width: 100%;
+                  height: 100%;
+                  padding-right: 0.5em;
+                "
+              >
+                <div
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    padding-top: 0em;
+                    display: flex;
+                    background-color: transparent;
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                  "
+                >
+                  <p style="text-align: right">إفادة ورقية</p>
+                </div>
+                <div
+                  style="
+                    width: 100%;
+                    height: 50%;
+                    line-height: 0;
+                    background-color: transparent;
+                  "
+                >
+                  <p
+                    style="
+                      font-size: small;
+                      color: gray;
+                      width: 17rem;
+                      white-space: nowrap;
+                      overflow: hidden;
+                      text-overflow: ellipsis;
+                      direction: rtl;
+                      padding: 1rem 0;
+                    "
+                  >
+                    قبل شهر
+                  </p>
+                </div>
+              </div>
+
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  flex-wrap: nowrap;
+
+                  align-items: center;
+
+                  width: 20%;
+                  justify-content: center;
+                "
+              >
+                <p-tag severity="success" value="تم التسليم" />
+              </div>
+            </div>
+          </div>
+          <!--! =====================================================-->
+        </div>
+        }@else if (pageindex == 2) {
+        <div
+          style="
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            padding: 1em;
+          "
+        >
+          <div
+            style="
+              width: 100%;
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              flex-wrap: nowrap;
+              gap: 0.5em;
+
+              justify-content: flex-start;
+            "
+          >
+            <p
+              style="
+                font-size: smaller;
+                text-align: right;
+                font-weight: 600;
+                padding: 1em 0;
+              "
+            >
+              المقررات المسجلة لفصل الربيع 2020 - 2021
+            </p>
+            <div
+              style="
+                width: 100%;
+                height: 8rem;
+                background-color: aliceblue;
+                border-radius: 1em;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                justify-content: space-around;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  flex-direction: row;
+                  flex-wrap: nowrap;
+                  justify-content: space-between;
+                  padding: 0 2rem;
+                "
+              >
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    gap: 0.3rem;
+                    color: #17177b;
+                  "
+                >
+                  <p>11:00 - 9:00</p>
+                  <i class="bi bi-clock"></i>
+                </div>
+                <div style="font-weight: 500">برمجة</div>
+              </div>
+
+              <div
+                style="
+                  display: flex;
+                  flex-direction: row;
+                  flex-wrap: nowrap;
+                  padding: 0 2rem;
+                  justify-content: flex-end;
+                  gap: 2rem;
+                "
+              >
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    gap: 0.3rem;
+                  "
+                >
+                  <p>القاعة الرئيسية</p>
+                  <i class="bi bi-geo-fill"></i>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    gap: 0.3rem;
+                  "
+                >
+                  <p>د،صالح علي</p>
+                  <i class="bi bi-person-circle"></i>
+                </div>
+              </div>
+            </div>
+            <div
+              style="
+                width: 100%;
+                height: 8rem;
+                background-color: aliceblue;
+                border-radius: 1em;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                justify-content: space-around;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  flex-direction: row;
+                  flex-wrap: nowrap;
+                  justify-content: space-between;
+                  padding: 0 2rem;
+                "
+              >
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    gap: 0.3rem;
+                    color: #17177b;
+                  "
+                >
+                  <p>11:00 - 9:00</p>
+                  <i class="bi bi-clock"></i>
+                </div>
+                <div style="font-weight: 500">برمجة</div>
+              </div>
+
+              <div
+                style="
+                  display: flex;
+                  flex-direction: row;
+                  flex-wrap: nowrap;
+                  padding: 0 2rem;
+                  justify-content: flex-end;
+                  gap: 2rem;
+                "
+              >
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    gap: 0.3rem;
+                  "
+                >
+                  <p>القاعة الرئيسية</p>
+                  <i class="bi bi-geo-fill"></i>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    gap: 0.3rem;
+                  "
+                >
+                  <p>د،صالح علي</p>
+                  <i class="bi bi-person-circle"></i>
+                </div>
+              </div>
+            </div>
+            <div
+              style="
+                width: 100%;
+                height: 8rem;
+                background-color: aliceblue;
+                border-radius: 1em;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                justify-content: space-around;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  flex-direction: row;
+                  flex-wrap: nowrap;
+                  justify-content: space-between;
+                  padding: 0 2rem;
+                "
+              >
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    gap: 0.3rem;
+                    color: #17177b;
+                  "
+                >
+                  <p>11:00 - 9:00</p>
+                  <i class="bi bi-clock"></i>
+                </div>
+                <div style="font-weight: 500">برمجة</div>
+              </div>
+
+              <div
+                style="
+                  display: flex;
+                  flex-direction: row;
+                  flex-wrap: nowrap;
+                  padding: 0 2rem;
+                  justify-content: flex-end;
+                  gap: 2rem;
+                "
+              >
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    gap: 0.3rem;
+                  "
+                >
+                  <p>القاعة الرئيسية</p>
+                  <i class="bi bi-geo-fill"></i>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    gap: 0.3rem;
+                  "
+                >
+                  <p>د،صالح علي</p>
+                  <i class="bi bi-person-circle"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            style="
+              width: 100%;
+              height: fit-content;
+              display: flex;
+              align-items: flex-end;
+              justify-content: space-between;
+              flex-wrap: nowrap;
+              flex-direction: row-reverse;
+
+    padding: 1em;
+    background-color: #eee;
+    border-radius: 1em;
+            "
+          >
+            <div>الاجمالي</div>
+            <div
+              style="
+                display: flex;
+                width: 100%;
+                height: 100%;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 2rem;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  flex-wrap: nowrap;
+                  flex-direction: row;
+                  align-items: center;
+                  gap: 0.4em;
+                "
+              >
+                <p>مواد</p>
+                <span>3</span>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  flex-wrap: nowrap;
+                  flex-direction: row;
+                  align-items: center;
+                  gap: 0.4em;
+                "
+              >
+                <p>وحدات</p>
+                <span>9</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+
+      <hr style="border: 0.1rem solid #ccc; margin: 1rem 0rem" />
+
+      <div
+        style="
+          height: 100%;
+          width: 100%;
+          background-color: transparent;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+        "
+      >
+        @if (pageindex == 1) {
+        <div
+          style="
+            height: 60%;
+            width: 100%;
+            display: flex;
+            background-color: transparent;
+            flex-direction: column;
+            flex-wrap: nowrap;
+          "
+        >
+          <div
+            style="
+              padding: 0.3em 0;
+              text-align: right;
+              font-weight: 500;
+              font-size: medium;
+            "
+          >
+            بطاقة الطالب
+          </div>
+          <div
+            style="
+              height: 100%;
+              width: 100%;
+              display: flex;
+              gap: 1rem;
+              background-color: transparent;
+              flex-direction: row;
+              flex-wrap: nowrap;
+            "
+          >
+            <div
+              style="
+                border-radius: 2rem;
+                width: 100%;
+                background-color: white;
+                box-shadow: 0px 3px 5px 0 lightgray;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: flex-start;
+              "
+            >
+              <div id="main" style="width: 100%; height: 100%"></div>
+              <p
+                style="
+                  position: relative;
+                  font-size: small;
+                  bottom: 20%;
+                  color: gray;
+                "
+              >
+                المعدل التراكمي يعبر عن مجموع نتائج الفصول
+              </p>
+            </div>
+            <div
+              style="
+                border-radius: 2rem;
+                width: 100%;
+                display: flex;
+                background-color: rgb(242 249 255);
+
+                box-shadow: 0px 3px 5px 0 lightgray;
+                flex-direction: column;
+                flex-wrap: nowrap;
+
+                padding: 1em;
+              "
+            >
+              <div
+                style="
+                  width: 100%;
+                  height: 30%;
+                  display: flex;
+                  background-color: transparent;
+                  flex-direction: row;
+                  flex-wrap: nowrap;
+                "
+              >
+                <div
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    align-items: flex-end;
+                    width: 100%;
+                    height: 100%;
+                    padding-right: 0.5em;
+                  "
+                >
+                  <div
+                    style="
+                      width: 100%;
+                      height: 100%;
+                      padding-top: 0em;
+                      display: flex;
+                      background-color: transparent;
+                      justify-content: flex-end;
+                      align-items: flex-end;
+                    "
+                  >
+                    <p style="font-weight: 600; text-align: right">
+                      <span style="color: gray">(3149)</span>جمال عادل محمد
+                      الزحاف
+                    </p>
+                  </div>
+                  <div
+                    style="
+                      width: 100%;
+                      height: 50%;
+                      line-height: 0;
+                      background-color: transparent;
+                    "
+                  >
+                    <p
+                      style="
+                        font-size: small;
+                        color: #17177b;
+                        font-weight: 500;
+                        text-align: right;
+                        margin: 1rem 0 1rem 0;
+                      "
+                    >
+                      قسم علم الحيوان
+                      <span style="color: gray">كلية العلوم بالزاوية</span>
+                    </p>
+                  </div>
+                </div>
+                <div
+                  style="
+                    min-width: 4em;
+                    display: flex;
+                    min-height: 4em;
+                    align-self: center;
+                    background: cornflowerblue;
+                    border-radius: 100em;
+                    align-items: center;
+                    justify-content: center;
+                    width: 4em;
+                    height: 4em;
+                  "
+                >
+                  <i class="bi bi-brilliance"></i>
+                </div>
+              </div>
+              <div
+                style="
+                  width: 100%;
+
+                  height: 60%;
+                  background-color: transparent;
+                  display: flex;
+
+                  flex-direction: row-reverse;
+                  flex-wrap: nowrap;
+                  gap: 0.5rem;
+                  padding: 2rem 0rem;
+                "
+              >
+                <div
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgb(217 230 255);
+                    border-radius: 0.7em;
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                >
+                  <p style="font-size: smaller; color: gray">الفصل</p>
+                  <p>الثالث</p>
+                </div>
+                <div
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgb(217 230 255);
+                    border-radius: 0.7em;
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                >
+                  <p style="font-size: smaller; color: gray">مواد الفصل</p>
+                  <p>5</p>
+                </div>
+                <div
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgb(217 230 255);
+                    border-radius: 0.7em;
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                >
+                  <p style="font-size: smaller; color: gray">وحدات الفصل</p>
+                  <p>13</p>
+                </div>
+                <div
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgb(255 84 84);
+                    color: white;
+                    border-radius: 0.7em;
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                >
+                  <p style="font-size: smaller">الانذارات</p>
+                  <p>0</p>
+                </div>
+              </div>
+              <div
+                style="
+                  width: 100%;
+                  height: 30%;
+                  display: flex;
+                  background-color: transparent;
+                  flex-direction: column;
+                  flex-wrap: nowrap;
+                "
+              >
+                <div
+                  style="
+                    width: 100%;
+                    height: 40%;
+                    background-color: transparent;
+                  "
+                >
+                  <div
+                    style="
+                      width: 100%;
+                      height: 100%;
+                      background-color: rgb(217 230 255);
+                      display: flex;
+                      justify-content: flex-end;
+                      border-radius: 2em;
+                    "
+                  >
+                    <div
+                      style="
+                        border-radius: 2em;
+                        width: 40%;
+                        height: 100%;
+                        background-color: rgb(10, 65, 168);
+                      "
+                    ></div>
+                  </div>
+                </div>
+                <div
+                  style="
+                    width: 100%;
+                    height: 100%;
+                    background-color: transparent;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    align-items: center;
+                    justify-content: space-between;
+                  "
+                >
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: row;
+                      gap: 0.3em;
+                      align-items: baseline;
+                    "
+                  >
+                    <p>وحدة</p>
+                    <P>60</P>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: row;
+                      gap: 0.2em;
+                      align-items: baseline;
+                    "
+                  >
+                    <p><span style="color: cornflowerblue">(%33)</span>وحدة</p>
+                    <p>23</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            height: 100%;
+            width: 100%;
+            background-color: transparent;
+            border-radius: 2rem;
+
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+          "
+        >
+          <div
+            style="
+              padding: 2em 0 0.8em 0;
+              text-align: right;
+              font-weight: 500;
+              font-size: medium;
+            "
+          >
+            نظرة عامة
+          </div>
+          <div
+            style="
+              width: 100%;
+              height: 100%;
+
+              background-color: white;
+
+              box-shadow: 0px 3px 5px 0 lightgray;
+              border-radius: 2rem;
+
+              display: flex;
+              flex-direction: column;
+              flex-wrap: nowrap;
+              align-items: flex-end;
+            "
+          >
+            <div style="width: 100%">
+              <div class="tab-bar">
+                <div
+                  class="tab-button"
+                  [class.active]="selectedTabIndex === 1"
+                  (click)="selectTab(1)"
+                >
+                  معدل الفصل و التراكمي
+                </div>
+
+                <div
+                  class="tab-button"
+                  [class.active]="selectedTabIndex === 2"
+                  (click)="selectTab(2)"
+                >
+                  الوحدات المسجلة و المنجزه
+                </div>
+              </div>
+            </div>
+
+            <div id="carve" style="width: 100%; height: 100%"></div>
+          </div>
+        </div>
+        }@else if (pageindex == 2) {
+
+        <div
+          style="
+            width: 100%;
+            height: 100%;
+            border-radius: 0.5em;
+            box-shadow: 0px 3px 5px 0 lightgray;
+
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+          "
+        >
+          <div
+            style="
+              width: 100%;
+              height: 10%;
+              background: white;
+              border-radius: 0.5em 0.5em 0 0;
+              padding: 0 1em;
+              display: flex;
+              flex-direction: row-reverse;
+              flex-wrap: nowrap;
+              align-content: center;
+              align-items: center;
+              justify-content: space-between;
+            "
+          >
+            <div>
+              <p-inputGroup>
+                <button
+                  type="button"
+                  pButton
+                  icon="pi pi-sliders-h"
+                  class="p-button-primary"
+                  style="border-radius: 6px 0 0 6px"
+                ></button>
+                <input type="text" pInputText placeholder="بحث : رمز المقرر" />
+              </p-inputGroup>
+            </div>
+            <div>
+              <form class="flex align-items-center gap-1">
+                <label for="ny" style="margin-right: 0.5em"
+                  >المقررات المتاحة لرفع المعدل</label
+                >
+                <p-checkbox value="New York" inputId="ny" />
+              </form>
+            </div>
+          </div>
+          <div
+            style="
+              width: 100%;
+              height: 90%;
+
+              background-color: white;
+
+              border-radius: 0 0 2rem 2rem;
+
+              display: flex;
+              flex-direction: column;
+              flex-wrap: nowrap;
+              align-items: flex-end;
+            "
+          >
+            <div style="width: 100%">
+              <div class="tab-bar">
+                <div
+                  class="tab-button"
+                  [class.active]="selectedTabIndex === 1"
+                  (click)="selectTab(1)"
+                >
+                  معدل الفصل و التراكمي
+                </div>
+
+                <div
+                  class="tab-button"
+                  [class.active]="selectedTabIndex === 2"
+                  (click)="selectTab(2)"
+                >
+                  الوحدات المسجلة و المنجزه
+                </div>
+              </div>
+            </div>
+
+            <ag-grid-angular
+              class="grid ag-theme-quartz"
+              [rowData]="RowDef"
+              [columnDefs]="ColDef"
+              [defaultColDef]="defultCol"
+              [pagination]="true"
+              [paginationPageSize]="15"
+              [paginationPageSizeSelector]="[5, 15, 100]"
+            />
+          </div>
+        </div>
+
+        }
+      </div>
+    </div>
+  </div>
+
+  <div
+    style="
+      width: 22%;
+      display: flex;
+      background-color: rgb(10, 65, 168);
+      color: darkgray;
+      margin: 1rem;
+      border-radius: 2rem;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: flex-end;
+      padding: 1rem;
+    "
+  >
+    <div
+      style="
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 1.3em;
+
+        color: whitesmoke;
+        align-items: center;
+        padding-bottom: 3rem;
+      "
+    >
+      <div>بوابة الطالب</div>
+      <div
+        style="
+          background-color: cadetblue;
+          width: 2em;
+          height: 2em;
+          font-size: 2rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 100em;
+        "
+      >
+        <i class="bi bi-lock-fill"></i>
+      </div>
+    </div>
+    <div
+      style="
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: flex-end;
+      "
+    >
+      <div
+        style="padding: 1em"
+        [className]="pageindex == 1 ? 'page-active' : ''"
+        (click)="setpage(1)"
+      >
+        الصفحة الرئيسية<i
+          class="bi bi-house-door-fill"
+          style="margin-left: 0.5em"
+        ></i>
+      </div>
+      <div
+        style="padding: 1em"
+        [className]="pageindex == 2 ? 'page-active' : ''"
+        (click)="setpage(2)"
+      >
+        تسجيل المقرارات<i
+          class="bi bi-journal-arrow-up"
+          style="margin-left: 0.5em"
+        ></i>
+      </div>
+      <p style="padding: 1em">
+        title here<i class="bi bi-lock-fill" style="margin-left: 0.5em"></i>
+      </p>
+      <p style="padding: 1em">
+        title here<i class="bi bi-lock-fill" style="margin-left: 0.5em"></i>
+      </p>
+      <p style="padding: 1em">
+        title here<i class="bi bi-lock-fill" style="margin-left: 0.5em"></i>
+      </p>
+      <p style="padding: 1em">
+        title here<i class="bi bi-lock-fill" style="margin-left: 0.5em"></i>
+      </p>
+      <p style="padding: 1em">
+        title here<i class="bi bi-lock-fill" style="margin-left: 0.5em"></i>
+      </p>
+      <p style="padding: 1em">
+        title here<i class="bi bi-lock-fill" style="margin-left: 0.5em"></i>
+      </p>
+      <p style="padding: 1em">
+        title here<i class="bi bi-lock-fill" style="margin-left: 0.5em"></i>
+      </p>
+      <p style="padding: 1em">
+        title here<i class="bi bi-lock-fill" style="margin-left: 0.5em"></i>
+      </p>
+      <p style="padding: 1em">
+        title here<i class="bi bi-lock-fill" style="margin-left: 0.5em"></i>
+      </p>
+    </div>
+  </div>
+</div>

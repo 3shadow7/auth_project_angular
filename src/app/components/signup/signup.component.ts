@@ -12,6 +12,10 @@ import { InputOtpModule } from 'primeng/inputotp';
 import { MessageService } from 'primeng/api';
 import { ToastModule } from 'primeng/toast';
 import { RippleModule } from 'primeng/ripple';
+import { signup_interface } from '../auth.module';
+
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-signup',
@@ -29,6 +33,7 @@ import { RippleModule } from 'primeng/ripple';
     RippleModule,
   ],
   providers: [MessageService],
+
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.scss',
 })
@@ -41,12 +46,19 @@ export class SignupComponent implements OnDestroy {
   conform_password!: string; //* to check that the password is typed as the user expects
 
   //? data form
-  Registration_Number!: any;  //? if first index is 1 u see passport input fuild || if first index is 2 u see country member input fuild
-  passport_Number?: number | undefined;
-  country_member_Number?: number | undefined;
-  phone!: number | null  ;
-  email!: string | null ;
-  password!: string;
+  form : signup_interface ={
+    id: 0,
+    Registration_Number: '',//? if first index is 1 u see passport input fuild || if first index is 2 u see country member input fuild
+    passport_Number: null,
+    country_member_Number: null,
+    phone: null,
+    email: null,
+    password : null ,
+    is_active : false ,
+    createdAt: new Date(),
+  }
+
+
 
   //? verified setup
   verified_with!: 'phone' | 'email';
@@ -59,7 +71,7 @@ export class SignupComponent implements OnDestroy {
   sec: number = 0;
   subscription!: Subscription;
 
-  constructor(private messageService: MessageService) {}
+  constructor(private messageService: MessageService,private router : Router) {}
   //! next page func
   next(index: number) {
     if (index === 0) {
@@ -139,7 +151,7 @@ export class SignupComponent implements OnDestroy {
   Field_Requirements_Alert(index: number) {
     //! here were error alert of page [1]
     if (index === 0) {
-      if (!this.Registration_Number) {
+      if (!this.form.Registration_Number) {
         this.error = 'عليك ادخال رقم القيد اولا';
         this.messageService.add({
           severity: 'error',
@@ -147,8 +159,8 @@ export class SignupComponent implements OnDestroy {
           detail: this.error,
         });
         return true;
-      } else if (this.Registration_Number) {
-        let isInvalidFormat = /[a-zA-Z]/.test(this.Registration_Number.toString());
+      } else if (this.form.Registration_Number) {
+        let isInvalidFormat = /[a-zA-Z]/.test(this.form.Registration_Number.toString());
         if(isInvalidFormat){
         this.error = 'يجب ان يكون ارقام فقط';
         this.messageService.add({
@@ -162,7 +174,7 @@ export class SignupComponent implements OnDestroy {
       }
 
 
-      if (!this.passport_Number && !this.country_member_Number) {
+      if (!this.form.passport_Number && !this.form.country_member_Number) {
         this.error = 'عليك ملئ كل الحقول اولا';
         this.messageService.add({
           severity: 'error',
@@ -172,8 +184,8 @@ export class SignupComponent implements OnDestroy {
         return true;
       }
 
-      if (this.passport_Number) {
-        let isInvalidFormat = /[a-zA-Z]/.test(this.passport_Number.toString());
+      if (this.form.passport_Number) {
+        let isInvalidFormat = /[a-zA-Z]/.test(this.form.passport_Number.toString());
         if(isInvalidFormat){
         this.error = 'يجب ان يكون ارقام فقط';
         this.messageService.add({
@@ -186,8 +198,8 @@ export class SignupComponent implements OnDestroy {
 
       }
 
-      if (this.country_member_Number) {
-        let isInvalidFormat = /[a-zA-Z]/.test(this.country_member_Number.toString());
+      if (this.form.country_member_Number) {
+        let isInvalidFormat = /[a-zA-Z]/.test(this.form.country_member_Number.toString());
         if(isInvalidFormat){
         this.error = 'يجب ان يكون ارقام فقط';
         this.messageService.add({
@@ -205,7 +217,7 @@ export class SignupComponent implements OnDestroy {
 
       //! here were error alert of page [2]
     } else if (index === 1) {
-      if (!this.phone) {
+      if (!this.form.phone) {
         this.error = 'عليك ادخال رقم الهاتف';
         this.messageService.add({
           severity: 'error',
@@ -213,7 +225,7 @@ export class SignupComponent implements OnDestroy {
           detail: this.error,
         });
         return true;
-      } else if (!this.email) {
+      } else if (!this.form.email) {
         this.error = 'عليك ادخال البريد الإلكتروني';
         this.messageService.add({
           severity: 'error',
@@ -221,8 +233,8 @@ export class SignupComponent implements OnDestroy {
           detail: this.error,
         });
         return true;
-      } else if (this.email) {
-        let email = this.email;
+      } else if (this.form.email) {
+        let email = this.form.email;
         const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.com$/;
         const isValid = emailPattern.test(email);
         if (isValid) {
@@ -256,8 +268,8 @@ export class SignupComponent implements OnDestroy {
 
       //! here were error alert of page [4]
     } else if (index === 3) {
-      if (!this.password || !this.conform_password) {
-        console.log('Password:', this.password);
+      if (!this.form.password || !this.conform_password) {
+        console.log('Password:', this.form.password);
         console.log('Confirm Password:', this.conform_password);
         this.error = 'عليك ملئ كل الحقول اولا';
         this.messageService.add({
@@ -266,7 +278,7 @@ export class SignupComponent implements OnDestroy {
           detail: this.error,
         });
         return true;
-      } else if (this.password.length < 8) {
+      } else if (this.form.password.length < 8) {
         this.error = 'كلمة المرور يجب أن تحتوي على 8 أحرف على الأقل';
         this.messageService.add({
           severity: 'error',
@@ -274,7 +286,7 @@ export class SignupComponent implements OnDestroy {
           detail: this.error,
         });
         return true;
-      } else if (this.password !== this.conform_password) {
+      } else if (this.form.password !== this.conform_password) {
         this.error = 'تأكد من ان كلمة المرور كتبت بشكل مطابق';
         this.messageService.add({
           severity: 'error',
@@ -304,22 +316,17 @@ export class SignupComponent implements OnDestroy {
   //! submit all data
   signup_is_done() {
     if (!this.Field_Requirements_Alert(3)) {
-      let data = {
-        id: 0,
-        Registration_Number: this.Registration_Number,
-        passport_Number: this.passport_Number,
-        country_member_Number: this.country_member_Number,
-        phone: this.phone,
-        email: this.email,
-        createdAt: new Date(),
-      };
+
 
       this.messageService.add({
         severity: 'success',
         summary: 'Success',
         detail: 'thanks for register',
       });
-      console.log('all data goes to back-end ', data); // send this data to back-end to complete register logic
+      console.log('all data goes to back-end ', {...this.form, createdAt : new Date()}); // send this data to back-end to complete register logic
+
+      this.router.navigate(['/dashboard'], { queryParams: { from: 'logout' } });
+
     }
   }
 

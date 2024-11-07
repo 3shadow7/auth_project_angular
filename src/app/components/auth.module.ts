@@ -3,33 +3,16 @@ import { CommonModule } from '@angular/common';
 
 
 
-// export interface signup_interface {
-//   id:number;
-//   email:string | null;
-//   phone:number | null;
-//   Registration_Number : number | null;
-//   passport_Number? : number | null;
-//   country_member_Number? : number | null;
-//   createdAt : Date ;
-// }
-
-export class signup {
- id:number;
-  email:string | null;
-  phone:number | null;
-  Registration_Number : number | null;
+export interface signup_interface {
+  id:number;
+  Registration_Number : any;
   passport_Number? : number | null;
   country_member_Number? : number | null;
+  phone:number | null;
+  email:string | null;
+  password : string | null ;
+  is_active : boolean ;
   createdAt : Date ;
-  constructor(){
-    this.id= 0;
-    this.email= null;
-    this.phone= null ;
-    this.Registration_Number= null;
-    this.passport_Number= null;
-    this.country_member_Number= null;
-    this.createdAt=new Date();
-  }
 }
 
 
@@ -39,4 +22,7 @@ export class signup {
     CommonModule
   ]
 })
-export class AuthModule { }
+export class SignUpModule {
+
+
+}

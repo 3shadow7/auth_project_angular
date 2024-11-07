@@ -1,6 +1,7 @@
+import { routes } from './app.routes';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterModule, RouterOutlet } from '@angular/router';
 
 
 @Component({
@@ -12,4 +13,12 @@ import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'auth-project';
+  currentRoute: string = '';
+  constructor(private router: Router) {
+
+  this.router.events.subscribe(() => {
+    this.currentRoute = this.router.url; //* Get the current route URL
+  });
+  }
+
 }
